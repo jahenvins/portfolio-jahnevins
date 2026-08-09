@@ -2,151 +2,364 @@ import { PortfolioData, EmailMeta } from "@/lib/types";
 
 export const DATA: PortfolioData = {
   name: "Jahnevi N S",
+  profileImage: "/images/jahnevi.jpg",
   email: "jahnevi@gmail.com",
-  linkedin: "https://linkedin.com/in/jahnevi-n-s",
+  linkedin: "https://linkedin.com/in/jahnevi-n-s-8388941ab",
   github: "https://github.com/jahenvins",
-  resumeUrl: "/JAHNEVI_NS_Resume.pdf",
+  resumeUrl: "/resume/JAHNEVI_NS_Resume.pdf",
 
-  role: "Frontend Developer | React, Angular & UI Engineering",
+  role: ".NET Full Stack Developer",
 
   about: [
-    "Hi! Welcome to my inbox portfolio 👋",
-    "I'm a Frontend Developer with 2.5+ years of experience at Capgemini and 3+ years of freelance UI/UX design experience.",
-    "I specialize in building scalable, accessible, and design-driven web applications using React, Angular, TypeScript, and modern frontend technologies.",
-    "My passion lies in transforming complex business requirements and UX wireframes into pixel-perfect, high-performance user experiences.",
-    "Currently, I'm exploring opportunities in frontend engineering, product development, and UI-focused full-stack roles."
+    "I'm a .NET Full Stack Developer with almost 3 years of experience building enterprise applications using C#, ASP.NET Core, React, Angular, Azure, and SQL Server.",
+    "I enjoy building reliable backend APIs, responsive frontend applications, cloud-enabled solutions, and exploring AI-assisted development workflows."
   ],
 
   skills: {
-    Frontend: [
-      "React",
-      "Next.js",
-      "Angular",
-      "TypeScript",
-      "JavaScript",
-      "Redux",
-      "Tailwind CSS",
-      "SPFx",
-      "Framer Motion"
-    ],
-
     Backend: [
-      "Node.js",
-      "Express.js",
+      "C#",
       ".NET",
-      "ASP.NET Web API",
+      "ASP.NET Core",
+      "Web API",
+      "Entity Framework Core",
       "REST APIs"
     ],
 
-    Database: [
-      "MongoDB",
-      "MSSQL",
-      "Supabase"
+    Frontend: [
+      "React",
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
     ],
 
-    Microsoft365: [
-      "SharePoint Online",
-      "SPFx",
-      "Power Automate",
-      "PowerApps",
-      "Microsoft Copilot"
+    "Azure & DevOps": [
+      "Azure App Services",
+      "Azure Functions",
+      "Azure DevOps",
+      "CI/CD"
+    ],
+
+    Database: [
+      "SQL Server",
+      "PostgreSQL"
+    ],
+
+    "AI & Modern Development": [
+      "GitHub Copilot",
+      "Claude",
+      "ChatGPT",
+      "Semantic Kernel",
+      "Prompt Engineering"
     ],
 
     Design: [
       "Figma",
-      "Photoshop",
-      "Illustrator",
-      "Rive",
-      "Design Systems",
-      "Wireframing"
-    ],
-
-    AI: [
-      "ChatGPT",
-      "Claude",
-      "GitHub Copilot",
-      "Microsoft Copilot",
-      "v0"
+      "Adobe Photoshop",
+      "Adobe Illustrator"
     ]
   },
 
-  projects: [
-    {
-      name: "FluxHR",
-      desc: "AI-powered HR and workforce management platform with employee management, leave workflows, and analytics dashboards.",
-      stack: "Next.js 15 · TypeScript · Tailwind · Supabase · Framer Motion",
-      link: "YOUR_FLUXHR_LINK"
-    },
-
-    {
-      name: "IRCTC UI Redesign",
-      desc: "Modern redesign of India's railway booking experience with reusable component architecture and motion design.",
-      stack: "Next.js · TypeScript · Tailwind · Framer Motion",
-      link: "YOUR_IRCTC_LINK"
-    },
-
+  workProjects: [
     {
       name: "Architect Portal",
-      desc: "Enterprise dashboard platform built at Capgemini for architect certification tracking and analytics.",
-      stack: "React · Redux · Node.js · MongoDB",
-      link: "#"
+
+      description:
+        "Enterprise application developed as part of my professional experience at Capgemini.",
+
+      stack: [
+        ".NET",
+        "ASP.NET Core Web API",
+        "React",
+        "Angular",
+        "Azure",
+        "SQL Server"
+      ],
+
+      highlights: [
+        "Developed and maintained enterprise application features",
+        "Built REST APIs and frontend components",
+        "Worked with Azure services and CI/CD workflows"
+      ]
     },
 
     {
-      name: "Knowledge Management Portal",
-      desc: "SharePoint-based enterprise knowledge platform with SPFx web parts and workflow automation.",
-      stack: "SPFx · React · SharePoint · Power Automate",
-      link: "#"
+      name: "KM Portal",
+
+      description:
+        "Enterprise knowledge management application developed as part of professional experience.",
+
+      stack: [
+        ".NET",
+        "ASP.NET Core Web API",
+        "React",
+        "SQL Server",
+        "Azure"
+      ],
+
+      highlights: [
+        "Developed backend APIs and frontend functionality",
+        "Worked on application enhancements and bug fixes",
+        "Integrated frontend components with REST APIs"
+      ]
+    },
+
+    {
+      name: "Sustainability Portal",
+
+      description:
+        "Enterprise sustainability-focused application developed as part of professional experience.",
+
+      stack: [
+        ".NET",
+        "ASP.NET Core",
+        "Angular",
+        "SQL Server",
+        "Azure"
+      ],
+
+      highlights: [
+        "Implemented application features based on business requirements",
+        "Developed API and UI components",
+        "Worked with enterprise development and deployment processes"
+      ]
+    },
+
+    {
+      name: "Retail Analytics Portal",
+
+      description:
+        "Enterprise analytics application supporting retail-related business workflows.",
+
+      stack: [
+        ".NET",
+        "ASP.NET Core Web API",
+        "Angular",
+        "SQL Server",
+        "Azure"
+      ],
+
+      highlights: [
+        "Developed application features and API integrations",
+        "Worked with data-driven frontend components",
+        "Supported application maintenance and enhancements"
+      ]
     }
-  ]
+  ],
+
+  independentProjects: [
+    {
+      name: "ContractLens",
+
+      description:
+        "AI-powered API contract intelligence application.",
+
+      stack: [
+        "React",
+        "TypeScript",
+        "ASP.NET Core",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+
+      highlights: [
+        "Built a premium SaaS-style interface",
+        "Developed ASP.NET Core Web APIs",
+        "Implemented API contract analysis workflows"
+      ],
+
+      link: ""
+    },
+
+    {
+      name: "QueryCraft",
+
+      description:
+        "Text-to-SQL application that converts natural language into SQL queries.",
+
+      stack: [
+        "React",
+        "TypeScript",
+        "ASP.NET Core",
+        "Semantic Kernel",
+        "Ollama",
+        "SQL"
+      ],
+
+      highlights: [
+        "Built natural-language SQL generation workflow",
+        "Integrated Semantic Kernel",
+        "Supported multiple SQL dialects"
+      ],
+
+      link: ""
+    }
+  ],
+
+  experience: [
+    {
+      company: "Capgemini",
+      role: "Senior Software Engineer",
+      location: "Navi Mumbai, India",
+      period: "June 2026 – Present"
+    },
+    {
+      company: "Capgemini",
+      role: "Software Analyst/Engineer",
+      location: "Navi Mumbai, India",
+      period: "Dec 2023 – Present"
+    }
+  ],
+
+  certifications: [
+    {
+      name: "Claude Developer – Foundations",
+      code: "Developer Foundations",
+      issuer: "Anthropic"
+    },
+
+    {
+      name: "Microsoft Certified: Azure Developer Associate",
+      code: "AZ-204",
+      issuer: "Microsoft"
+    },
+
+    {
+      name: "Microsoft Certified: Azure AI Engineer Associate",
+      code: "AI-102",
+      issuer: "Microsoft"
+    }
+  ],
+
+  education: {
+    degree: "...",
+    university: "...",
+    period: "...",
+    location: "...",
+    cgpa: "..."
+  },
+
+  availability: {
+    relocation: true,
+
+    locations: [
+      "Mumbai",
+      "Navi Mumbai",
+      "Pune",
+      "Bangalore"
+    ]
+  }
 };
 
 export const EMAILS: EmailMeta[] = [
   {
-    id: "about",
-    subject: "Introducing myself 👋",
-    preview: "Frontend developer with 2.5+ years at Capgemini and a passion for UI engineering...",
-    time: "9:00 AM",
+    id: "resume",
+    sender: "Jahnevi N S",
+    subject: "Resume — .NET Full Stack Developer",
+    preview: "C#, .NET, React, Angular, Azure & AI",
+    time: "2026",
     color: "#1a73e8",
+    section: "inbox",
+  },
+
+  {
+    id: "about",
+    sender: "Bio Overview",
+    subject: "About me",
+    preview: "Full Stack .NET Developer",
+    time: "2026",
+    color: "#34a853",
+    section: "about",
   },
 
   {
     id: "experience",
-    subject: "What I built at Capgemini",
-    preview: "Enterprise dashboards, SharePoint portals and scalable frontend systems...",
-    time: "8:45 AM",
-    color: "#34a853",
+    sender: "Capgemini",
+    subject: "Professional experience",
+    preview: "Senior Analyst · .NET · Full Stack · Azure",
+    time: "2026",
+    color: "#4285f4",
+    section: "experience",
   },
 
   {
-    id: "projects",
-    subject: "Projects I'm proud of",
-    preview: "FluxHR, IRCTC redesign, analytics dashboards and more...",
-    time: "Yesterday",
+    id: "work-projects",
+    sender: "Capgemini Projects",
+    subject: "Professional projects",
+    preview: "Architect Portal, KM Portal & more",
+    time: "2026",
     color: "#fbbc04",
+    section: "projects",
+  },
+
+  {
+    id: "independent-projects",
+    sender: "Side Projects",
+    subject: "Independent projects",
+    preview: "ContractLens, QueryCraft & more",
+    time: "2026",
+    color: "#9333ea",
+    section: "projects",
   },
 
   {
     id: "skills",
-    subject: "My tech stack",
-    preview: "React, Angular, TypeScript, Next.js, Node.js, SPFx and AI tools...",
-    time: "Mon",
-    color: "#ea4335",
+    sender: "Tech Stack",
+    subject: "Technical skills",
+    preview: "C#, .NET, React, Angular, Azure & SQL",
+    time: "2026",
+    color: "#0f9d58",
+    section: "about",
   },
 
   {
-    id: "resume",
-    subject: "Resume attached 📎",
-    preview: "Updated July 2026 version available for download...",
-    time: "Mon",
-    color: "#9334e6",
+    id: "azure",
+    sender: "Microsoft Azure",
+    subject: "Azure & DevOps",
+    preview: "Cloud, CI/CD and Azure services",
+    time: "2026",
+    color: "#0078d4",
+    section: "drafts",
+  },
+
+  {
+    id: "ai",
+    sender: "Anthropic & AI",
+    subject: "AI-assisted development",
+    preview: "Generative AI, Semantic Kernel & AI tools",
+    time: "2026",
+    color: "#9333ea",
+    section: "drafts",
+  },
+
+  {
+    id: "certifications",
+    sender: "Microsoft & Anthropic",
+    subject: "Certifications",
+    preview: "AZ-204, AI-102 & Claude Foundations",
+    time: "2026",
+    color: "#f59e0b",
+    section: "certifications",
+  },
+
+  {
+    id: "design",
+    sender: "UI/UX Design",
+    subject: "Design background",
+    preview: "Figma, Photoshop & Illustrator",
+    time: "2026",
+    color: "#ec4899",
+    section: "freelance",
   },
 
   {
     id: "contact",
-    subject: "Let's build something together",
-    preview: "Open to frontend, UI engineering and product development opportunities...",
-    time: "Sun",
-    color: "#0f9d58",
-  }
+    sender: "Recruiter Connect",
+    subject: "Let's connect",
+    preview: "Email, LinkedIn & GitHub",
+    time: "2026",
+    color: "#ea4335",
+    section: "contact",
+  },
 ];
