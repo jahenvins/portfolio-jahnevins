@@ -332,47 +332,47 @@ export const EMAILS: EmailMeta[] = [
 import { MemoryItem } from "@/lib/types";
 
 export const MEMORIES: Record<string, MemoryItem> = {
-  "office-trip": {
-    id: "office-trip",
-    title: "Office Trip '24 — Silvassa Retreats",
-    subtitle: "Capgemini Annual Team Outing",
-    date: "2025 – 2026",
-    sender: "Capgemini Team",
-    description:
-      "Unforgettable annual team retreats with the Capgemini team! From Boat rides in Daman to team-bonding games and night bonfires in Silvassa, this trip brought the entire GEN AI developer crew closer together.",
-    tags: ["Silvassa", "Team Outing", "Boating Memories", "Capgemini"],
-    images: [
-       {
-        type: "image",
-        url: "/memories/IMG_2988.jpg",
-        caption: "Training Crew  - Lonavala Trip",
-      },
-{
-        type: "image",
-        url: "/memories/cg3.jpg",
-        caption: "CPL Cricket Match — Team Photo - Winners!",
-      },
+//   "office-trip": {
+//     id: "office-trip",
+//     title: "Office Trip '24 — Silvassa Retreats",
+//     subtitle: "Capgemini Annual Team Outing",
+//     date: "2025 – 2026",
+//     sender: "Capgemini Team",
+//     description:
+//       "Unforgettable annual team retreats with the Capgemini team! From Boat rides in Daman to team-bonding games and night bonfires in Silvassa, this trip brought the entire GEN AI developer crew closer together.",
+//     tags: ["Silvassa", "Team Outing", "Boating Memories", "Capgemini"],
+//     images: [
+//        {
+//         type: "image",
+//         url: "/memories/IMG_2988.jpg",
+//         caption: "Training Crew  - Lonavala Trip",
+//       },
+// {
+//         type: "image",
+//         url: "/memories/cg3.jpg",
+//         caption: "CPL Cricket Match — Team Photo - Winners!",
+//       },
     
 
 
-      {
-        type: "image",
-        url: "/memories/cg5.jpg",
-        caption: "Training Crew  - Lonavala Trip",
-      },
+//       {
+//         type: "image",
+//         url: "/memories/cg5.jpg",
+//         caption: "Training Crew  - Lonavala Trip",
+//       },
 
-      {
-        type: "image",
-        url: "/memories/cg6.jpg",
-        caption: "Friday Pizza Party & Release Celebrations",
-      },
-      {
-        type: "image",
-        url: "/memories/IMG_3991.jpg",
-        caption: "Training Crew  - Lonavala Trip",
-      },
-    ],
-  },
+//       {
+//         type: "image",
+//         url: "/memories/cg6.jpg",
+//         caption: "Friday Pizza Party & Release Celebrations",
+//       },
+//       {
+//         type: "image",
+//         url: "/memories/IMG_3991.jpg",
+//         caption: "Training Crew  - Lonavala Trip",
+//       },
+//     ],
+//   },
  "work-gang": {
     id: "work-gang",
     title: "The Capgemini Crew — Work Besties & Lifelong Friends",

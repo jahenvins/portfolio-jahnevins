@@ -106,8 +106,8 @@ export default function Sidebar({
 const moreItems = [
     {
       icon: Plane,
-      label: "Office Trip '24",
-      count: "📸",
+      label: "Trip '25",
+      count: "📸 - soon",
       section: "office-trip" as SidebarSection,
     },
     {
