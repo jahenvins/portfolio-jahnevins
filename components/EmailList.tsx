@@ -15,6 +15,8 @@ import { DATA, EMAILS } from "@/data/portfolio";
 import { EmailMeta, SidebarSection } from "@/lib/types";
 import { getSentMessages, SentMessage } from "@/lib/messages";
 
+type Tab = "primary" | "projects" | "experience" | "resume";
+
 function initials(str: string) {
   return str
     .split(" ")
@@ -38,10 +40,12 @@ export default function EmailList({
   onOpen,
   readIds,
   activeSection,
+  activeTab = "primary",
 }: {
   onOpen: (id: EmailMeta["id"]) => void;
   readIds: Set<EmailMeta["id"]>;
   activeSection: SidebarSection;
+  activeTab?: Tab;
 }) {
   const [sentMessages, setSentMessages] = useState<SentMessage[]>([]);
   const [loadingSent, setLoadingSent] = useState(false);
@@ -92,18 +96,15 @@ export default function EmailList({
               transition={{ delay: index * 0.03, duration: 0.2 }}
               className="group relative flex items-center gap-3 border-b border-gborder px-4 py-3 transition-colors hover:bg-ghover sm:px-5"
             >
-              {/* Sender Avatar */}
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1a73e8] text-xs font-semibold text-white">
                 {initials(msg.sender_email)}
               </div>
 
-              {/* Sender Email Column */}
               <div className="flex min-w-0 flex-1 items-center justify-between gap-4">
                 <span className="truncate text-xs font-medium text-gtext sm:text-[13px]">
                   {msg.sender_email}
                 </span>
 
-                {/* Sent Time Column */}
                 <span className="shrink-0 text-[11px] text-gdim whitespace-nowrap">
                   {formatDate(msg.created_at)}
                 </span>
@@ -119,11 +120,15 @@ export default function EmailList({
   // STANDARD INBOX / CATEGORY VIEW
   // =====================================================
   const filteredEmails = EMAILS.filter((email) => {
-    if (activeSection === "inbox") return true;
-    return email.section === activeSection;
+    if (activeSection !== "inbox") {
+      return email.section === activeSection;
+    }
+    // When in Inbox section, match based on activeTab
+    if (activeTab === "primary") return true;
+    return email.section === activeTab;
   });
 
-  const showResume = activeSection === "inbox" || activeSection === "about";
+  const showResume = (activeSection === "inbox" && activeTab === "primary") || activeSection === "about";
   const normalEmails = filteredEmails.filter((email) => email.id !== "resume");
 
   const openResume = () => {
