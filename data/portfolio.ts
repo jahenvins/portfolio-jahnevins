@@ -113,54 +113,99 @@ workProjects: [
 ],
 
 
-  independentProjects: [
-    {
-      name: "ContractLens",
+ independentProjects: [
+  {
+    name: "IRCTC",
 
-      description:
-        "AI-powered API contract intelligence application.",
+    description:
+      "Modern railway booking application inspired by the IRCTC travel experience.",
 
-      stack: [
-        "React",
-        "TypeScript",
-        "ASP.NET Core",
-        "Tailwind CSS",
-        "Framer Motion"
-      ],
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Responsive UI"
+    ],
 
-      highlights: [
-        "Built a premium SaaS-style interface",
-        "Developed ASP.NET Core Web APIs",
-        "Implemented API contract analysis workflows"
-      ],
+    highlights: [
+      "Built train search and booking workflows",
+      "Implemented PNR status and train tracking interfaces",
+      "Designed a responsive railway travel experience"
+    ],
 
-      link: ""
-    },
+    link: "https://irctc-ui-uc.netlify.app/"
+  },
 
-    {
-      name: "QueryCraft",
+  {
+    name: "FluxHR",
 
-      description:
-        "Text-to-SQL application that converts natural language into SQL queries.",
+    description:
+      "AI-powered HR platform focused on leave management and workforce intelligence.",
 
-      stack: [
-        "React",
-        "TypeScript",
-        "ASP.NET Core",
-        "Semantic Kernel",
-        "Ollama",
-        "SQL"
-      ],
+    stack: [
+      "React",
+      "TypeScript",
+      "AI",
+      "HR Analytics",
+      "Tailwind CSS"
+    ],
 
-      highlights: [
-        "Built natural-language SQL generation workflow",
-        "Integrated Semantic Kernel",
-        "Supported multiple SQL dialects"
-      ],
+    highlights: [
+      "Built employee leave management workflows",
+      "Implemented HR analytics and AI-powered insights",
+      "Designed role-based dashboards and smart notifications"
+    ],
 
-      link: ""
-    }
-  ],
+    link: "https://fluxhr.netlify.app/"
+  },
+
+  {
+    name: "QueryCraft",
+
+    description:
+      "Text-to-SQL application that converts natural language into SQL queries.",
+
+    stack: [
+      "React",
+      "TypeScript",
+      "ASP.NET Core",
+      "Semantic Kernel",
+      "Ollama",
+      "SQL"
+    ],
+
+    highlights: [
+      "Built natural-language SQL generation workflow",
+      "Integrated Semantic Kernel with local LLM inference",
+      "Supported multiple SQL dialects"
+    ],
+
+    link: "https://query-craft.netlify.app/"
+  },
+
+  {
+    name: "ContractLens",
+
+    description:
+      "AI-powered API contract intelligence application.",
+
+    stack: [
+      "React",
+      "TypeScript",
+      "ASP.NET Core",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+
+    highlights: [
+      "Built a premium SaaS-style interface",
+      "Developed ASP.NET Core Web APIs",
+      "Implemented API contract analysis workflows"
+    ],
+
+    link: ""
+  }
+],
 
   experience: [
     {
