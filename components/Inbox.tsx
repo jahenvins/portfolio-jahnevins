@@ -1374,7 +1374,6 @@ export default function Inbox() {
                 />
               ) : openId ? (
                 <ReadingPane
-                  id={openId}
                   onBack={() => {
                     setOpenId(null);
                     setActiveTab("primary");
