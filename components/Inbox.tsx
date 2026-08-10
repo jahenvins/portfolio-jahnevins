@@ -1361,6 +1361,7 @@ export default function Inbox() {
     />
   ) : openId ? (
     <ReadingPane
+      id={openId}
       onBack={() => {
         setOpenId(null);
         setActiveTab("primary");
@@ -1368,9 +1369,10 @@ export default function Inbox() {
     />
   ) : (
     <EmailList
-      onOpen={handleOpen} // <-- Make sure onOpen is bound to handleOpen
+      onOpen={handleOpen}
       readIds={readIds}
       activeSection={activeSection}
+      activeTab={activeTab}
     />
   )}
 </div>
@@ -1857,3 +1859,6 @@ function GmailTab({
     </button>
   );
 }
+
+  );
+}s
