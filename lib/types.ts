@@ -92,7 +92,25 @@ export type SidebarSection =
   | "freelance"
   | "contact"
   | "talk"
-  | "ai";
+  | "ai"
+  | "office-trip"
+  | "work-gang"
+  | "college-gang";
+
+export interface MemoryItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  sender: string;
+  description: string;
+  tags: string[];
+  images: {
+    type?: "image" | "video";
+    url: string;
+    caption: string;
+  }[];
+}
 
 export interface EmailMeta {
   id: EmailId;

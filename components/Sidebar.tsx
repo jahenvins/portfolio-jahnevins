@@ -103,47 +103,30 @@ export default function Sidebar({
     },
   ];
 
-  // Extended menu items revealed when "More" is clicked
-  const moreItems = [
+const moreItems = [
     {
       icon: Plane,
       label: "Office Trip '24",
       count: "📸",
-      action: () => alert("Office Trip Memories: Goa & Alibaug team retreats!"),
+      section: "office-trip" as SidebarSection,
     },
     {
       icon: Users,
       label: "The Gang (Work)",
       count: "Capgemini",
-      action: () => alert("Capgemini Dev Team: Work hard, party harder!"),
+      section: "work-gang" as SidebarSection,
     },
     {
       icon: Heart,
       label: "College Gang",
       count: "PCE '23",
-      action: () => alert("Pillai College of Engineering Crew!"),
+      section: "college-gang" as SidebarSection,
     },
     {
       icon: Instagram,
       label: "Instagram",
-      action: () => window.open("https://instagram.com", "_blank"),
+      action: () => window.open("https://www.instagram.com/jaxn.xvi?igsh=dzJ1Nzl1OGlhd2ly", "_blank"),
     },
-    // {
-    //   icon: Palette,
-    //   label: "Design Gallery",
-    //   count: "Google Sites",
-    //   action: () =>
-    //     window.open(
-    //       "https://sites.google.com/view/junecaeles-portofolio/home",
-    //       "_blank"
-    //     ),
-    // },
-    // {
-    //   icon: Coffee,
-    //   label: "Daily Stack",
-    //   count: "☕ + 💻",
-    //   action: () => alert("Fuel: Black Coffee, .NET Core, & React"),
-    // },
   ];
 
   const handleNavigation = (section: SidebarSection) => {
@@ -332,33 +315,39 @@ export default function Sidebar({
 
             {/* Expanded Items */}
             {showMore && (
-              <div className="mt-1 space-y-0.5 border-l-2 border-gray-100 ml-4 pl-2 transition-all">
-                {moreItems.map((subItem) => {
-                  const SubIcon = subItem.icon;
-                  return (
-                    <button
-                      key={subItem.label}
-                      type="button"
-                      onClick={subItem.action}
-                      className="group flex min-h-[36px] w-full items-center rounded-r-full px-4 text-xs text-gray-700 transition-colors hover:bg-[#f1f3f4] hover:text-black"
-                    >
-                      <SubIcon
-                        size={15}
-                        className="flex-shrink-0 text-gray-500 transition-transform group-hover:scale-110"
-                      />
-                      <span className="ml-3 flex-1 truncate text-left">
-                        {subItem.label}
-                      </span>
-                      {subItem.count && (
-                        <span className="ml-1 text-[11px] font-medium text-gray-400">
-                          {subItem.count}
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            )}
+  <div className="mt-1 space-y-0.5 border-l-2 border-gray-100 ml-4 pl-2 transition-all">
+    {moreItems.map((subItem) => {
+      const SubIcon = subItem.icon;
+      return (
+        <button
+          key={subItem.label}
+          type="button"
+          onClick={() => {
+            if (subItem.section) {
+              handleNavigation(subItem.section);
+            } else if (subItem.action) {
+              subItem.action();
+            }
+          }}
+          className="group flex min-h-[36px] w-full items-center rounded-r-full px-4 text-xs text-gray-700 transition-colors hover:bg-[#f1f3f4] hover:text-black"
+        >
+          <SubIcon
+            size={15}
+            className="flex-shrink-0 text-gray-500 transition-transform group-hover:scale-110"
+          />
+          <span className="ml-3 flex-1 truncate text-left">
+            {subItem.label}
+          </span>
+          {subItem.count && (
+            <span className="ml-1 text-[11px] font-medium text-gray-400">
+              {subItem.count}
+            </span>
+          )}
+        </button>
+      );
+    })}
+  </div>
+)}
           </div>
         </nav>
       </aside>

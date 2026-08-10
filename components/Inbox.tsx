@@ -1,5 +1,6 @@
 "use client";
-
+import MemoryView from "./MemoryView";
+import { MEMORIES } from "@/data/portfolio";
 import {
   submitRating,
   getRatingStats,
@@ -1348,8 +1349,7 @@ export default function Inbox() {
                 />
               </div>
             </div>
-
-            {/* =================================================
+{/* =================================================
                 EMAIL / READING CONTENT
             ================================================= */}
 
@@ -1367,7 +1367,12 @@ export default function Inbox() {
                 scroll-smooth
               "
             >
-              {openId ? (
+              {MEMORIES[activeSection] ? (
+                <MemoryView
+                  memory={MEMORIES[activeSection]}
+                  onBack={() => setActiveSection("inbox")}
+                />
+              ) : openId ? (
                 <ReadingPane
                   id={openId}
                   onBack={() => {

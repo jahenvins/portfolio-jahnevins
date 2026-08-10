@@ -61,92 +61,57 @@ export const DATA: PortfolioData = {
     ]
   },
 
-  workProjects: [
-    {
-      name: "Architect Portal",
 
-      description:
-        "Enterprise application developed as part of my professional experience at Capgemini.",
+workProjects: [
+  {
+    name: "Architect Portal",
+    description:
+      "Enterprise portal for performance, certification, and trend analytics, built to streamline reporting and provide actionable insights.",
+    stack: [],
+    highlights: [
+      "Contributed to the development of dashboards and RESTful APIs using React and ASP.NET Core Web API, reducing manual reporting effort by 40%.",
+      "Developed backend services using C#, Entity Framework Core, LINQ, and PostgreSQL with validation, exception handling, and optimized data access.",
+      "Supported deployment and application hosting through Azure App Service."
+    ]
+  },
 
-      stack: [
-        ".NET",
-        "ASP.NET Core Web API",
-        "React",
-        "Angular",
-        "Azure",
-        "SQL Server"
-      ],
+  {
+    name: "KM Portal",
+    description:
+      "Enterprise knowledge management portal focused on content management, business workflows, and operational efficiency.",
+    stack: [],
+    highlights: [
+      "Contributed to portal enhancements using C#/.NET and Azure Functions, automating business workflows and content management processes.",
+      "Helped reduce manual content-update effort by 30% through workflow and application improvements.",
+      "Implemented data-access and business logic using MSSQL, Entity Framework Core, and LINQ for content retrieval and operational workflows."
+    ]
+  },
 
-      highlights: [
-        "Developed and maintained enterprise application features",
-        "Built REST APIs and frontend components",
-        "Worked with Azure services and CI/CD workflows"
-      ]
-    },
+  {
+    name: "Sustainability Portal",
+    description:
+      "Enterprise sustainability platform supporting event registration, community engagement, and internal business workflows.",
+    stack: [],
+    highlights: [
+      "Contributed to frontend and backend development using React, ASP.NET Core Web API, and MSSQL.",
+      "Developed RESTful APIs, database operations, validation, and error handling using C#, Entity Framework Core, and SQL Server.",
+      "Worked with Azure DevOps deployment workflows to support continuous delivery across development environments."
+    ]
+  },
 
-    {
-      name: "KM Portal",
+  {
+    name: "Retail Analytics Portal",
+    description:
+      "Analytics and forecasting platform supporting reporting workflows and data-driven business insights.",
+    stack: [],
+    highlights: [
+      "Contributed to reporting and forecasting workflows using Angular and ASP.NET Core Web API.",
+      "Integrated .NET APIs with Python-based reporting endpoints to support analytics workflows.",
+      "Supported Azure DevOps CI/CD processes for automated build, testing, and deployment across Agile development cycles."
+    ]
+  }
+],
 
-      description:
-        "Enterprise knowledge management application developed as part of professional experience.",
-
-      stack: [
-        ".NET",
-        "ASP.NET Core Web API",
-        "React",
-        "SQL Server",
-        "Azure"
-      ],
-
-      highlights: [
-        "Developed backend APIs and frontend functionality",
-        "Worked on application enhancements and bug fixes",
-        "Integrated frontend components with REST APIs"
-      ]
-    },
-
-    {
-      name: "Sustainability Portal",
-
-      description:
-        "Enterprise sustainability-focused application developed as part of professional experience.",
-
-      stack: [
-        ".NET",
-        "ASP.NET Core",
-        "Angular",
-        "SQL Server",
-        "Azure"
-      ],
-
-      highlights: [
-        "Implemented application features based on business requirements",
-        "Developed API and UI components",
-        "Worked with enterprise development and deployment processes"
-      ]
-    },
-
-    {
-      name: "Retail Analytics Portal",
-
-      description:
-        "Enterprise analytics application supporting retail-related business workflows.",
-
-      stack: [
-        ".NET",
-        "ASP.NET Core Web API",
-        "Angular",
-        "SQL Server",
-        "Azure"
-      ],
-
-      highlights: [
-        "Developed application features and API integrations",
-        "Worked with data-driven frontend components",
-        "Supported application maintenance and enhancements"
-      ]
-    }
-  ],
 
   independentProjects: [
     {
@@ -283,15 +248,15 @@ export const EMAILS: EmailMeta[] = [
     section: "experience",
   },
 
-  {
-    id: "work-projects",
-    sender: "Capgemini Projects",
-    subject: "Professional projects",
-    preview: "Architect Portal, KM Portal & more",
-    time: "2026",
-    color: "#fbbc04",
-    section: "projects",
-  },
+  // {
+  //   id: "work-projects",
+  //   sender: "Capgemini Projects",
+  //   subject: "Professional projects",
+  //   preview: "Architect Portal, KM Portal & more",
+  //   time: "2026",
+  //   color: "#fbbc04",
+  //   section: "projects",
+  // },
 
   {
     id: "independent-projects",
@@ -363,3 +328,199 @@ export const EMAILS: EmailMeta[] = [
     section: "contact",
   },
 ];
+
+import { MemoryItem } from "@/lib/types";
+
+export const MEMORIES: Record<string, MemoryItem> = {
+  "office-trip": {
+    id: "office-trip",
+    title: "Office Trip '24 — Silvassa Retreats",
+    subtitle: "Capgemini Annual Team Outing",
+    date: "2025 – 2026",
+    sender: "Capgemini Team",
+    description:
+      "Unforgettable annual team retreats with the Capgemini team! From Boat rides in Daman to team-bonding games and night bonfires in Silvassa, this trip brought the entire GEN AI developer crew closer together.",
+    tags: ["Silvassa", "Team Outing", "Boating Memories", "Capgemini"],
+    images: [
+       {
+        type: "image",
+        url: "/memories/IMG_2988.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+{
+        type: "image",
+        url: "/memories/cg3.jpg",
+        caption: "CPL Cricket Match — Team Photo - Winners!",
+      },
+    
+
+
+      {
+        type: "image",
+        url: "/memories/cg5.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+
+      {
+        type: "image",
+        url: "/memories/cg6.jpg",
+        caption: "Friday Pizza Party & Release Celebrations",
+      },
+      {
+        type: "image",
+        url: "/memories/IMG_3991.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+    ],
+  },
+ "work-gang": {
+    id: "work-gang",
+    title: "The Capgemini Crew — Work Besties & Lifelong Friends",
+    subtitle: "From Training Room Struggles to Unplanned Goa Trips",
+    date: "2023 – Present",
+    sender: "The Capgemini Squad",
+    description:
+      "What started as surviving fresher training sessions and stressing over PR reviews turned into finding my people for life. From endless coffee break gossips and emergency hotfixes to weekend road trips, temple visits, late-night match screenings, and endless messing around in the office—these aren't just colleagues, they're family.",
+    tags: [
+      "Keepers For Life",
+      "Chai & Gossip",
+      "Capgemini Squad",
+      "Always planning the next trip",
+      
+    ],
+    images: [
+      {
+        type: "image",
+          url: "/memories/cg2.jpg",
+        caption: "After office hours",
+      },
+     {
+  type: "video",
+  url: "/memories/cg1.mp4", // Served directly from public/memories/cg1.mp4
+  caption: "Office Trip & Celebration Clip 🎥",
+},
+{
+        type: "image",
+        url: "/memories/cg11.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+
+      {
+        type: "image",
+        url: "/memories/IMG_2988.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+{
+        type: "image",
+        url: "/memories/cg3.jpg",
+        caption: "CPL Cricket Match — Team Photo - Winners!",
+      },
+    
+
+
+      {
+        type: "image",
+        url: "/memories/cg5.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+
+      {
+        type: "image",
+        url: "/memories/cg6.jpg",
+        caption: "Friday Pizza Party & Release Celebrations",
+      },
+      {
+        type: "image",
+        url: "/memories/IMG_3991.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+      {
+        type: "image",
+        url: "/memories/cg13.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+      {
+        type: "video",
+        url: "/memories/cg4.MOV",
+        caption: "Friday Pizza Party & Release Celebrations",
+      },
+
+      {
+        type: "image",
+        url: "/memories/cg11.jpg",
+        caption: "Friday Pizza Party & Release Celebrations",
+      },
+
+      {
+        type: "image",
+        url: "/memories/cg8.jpg",
+        caption: "Friday Pizza Party & Release Celebrations",
+      },
+
+    
+
+      {
+        type: "image",
+        url: "/memories/cg10.jpg",
+        caption: "Friday Pizza Party & Release Celebrations",
+      },
+    ],
+  },
+  "college-gang": {
+    id: "college-gang",
+    title: "College Gang — PCE Class of '23",
+    subtitle: "Pillai College of Engineering, IT Department",
+    date: "2019 – 2023",
+    sender: "PCE IT Squad",
+    description:
+      "Four years of engineering packed with hackathons, festival prep for Alegria, last-minute assignment submissions, and infinite memories in Navi Mumbai. The college crew that started it all!",
+    tags: ["Pillai College", "IT Engineering", "Alegria Fest", "Navi Mumbai"],
+    images: [
+     {
+        type: "image",
+        url: "/memories/gang1.jpg",
+        caption: "",
+      },
+      {
+        type: "image",
+        url: "/memories/gang2.jpg",
+        caption: "",
+      },
+      {
+        type: "image",
+        url: "/memories/gang3.jpg",
+        caption: "",
+      },
+      {
+        type: "image",
+        url: "/memories/gang6.jpg",
+        caption: "",
+      },
+      {
+        type: "video",
+        url: "/memories/gang4.mp4",
+        caption: "",
+      },
+      {
+        type: "image",
+        url: "/memories/gang5.jpg",
+        caption: "Training Crew  - Lonavala Trip",
+      },
+       {
+        type: "image",
+        url: "/memories/gang7.jpg",
+        caption: "",
+      },
+       {
+        type: "image",
+        url: "/memories/gang8.jpg",
+        caption: "",
+      },
+       {
+        type: "image",
+        url: "/memories/gang9.jpg",
+        caption: "",
+      },
+    ],
+  },
+};
