@@ -1353,40 +1353,29 @@ export default function Inbox() {
                 EMAIL / READING CONTENT
             ================================================= */}
 
-            <div
-              className="
-                min-h-0
-                min-w-0
-                flex-1
+            <div className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain scroll-smooth">
+  {MEMORIES[activeSection] ? (
+    <MemoryView
+      memory={MEMORIES[activeSection]}
+      onBack={() => setActiveSection("inbox")}
+    />
+  ) : openId ? (
+    <ReadingPane
+      onBack={() => {
+        setOpenId(null);
+        setActiveTab("primary");
+      }}
+    />
+  ) : (
+    <EmailList
+      onOpen={handleOpen} // <-- Make sure onOpen is bound to handleOpen
+      readIds={readIds}
+      activeSection={activeSection}
+    />
+  )}
+</div>
 
-                overflow-y-auto
-                overflow-x-hidden
-
-                overscroll-contain
-
-                scroll-smooth
-              "
-            >
-              {MEMORIES[activeSection] ? (
-                <MemoryView
-                  memory={MEMORIES[activeSection]}
-                  onBack={() => setActiveSection("inbox")}
-                />
-              ) : openId ? (
-                <ReadingPane
-                  onBack={() => {
-                    setOpenId(null);
-                    setActiveTab("primary");
-                  }}
-                />
-              ) : (
-                <EmailList
-                  onOpen={handleOpen}
-                  readIds={readIds}
-                  activeSection={activeSection}
-                />
-              )}
-            </div>
+            
           </div>
         </div>
       </div>
