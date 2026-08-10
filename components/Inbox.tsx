@@ -1856,9 +1856,4 @@ function GmailTab({
           </span>
         )}
       </div>
-    </button>
-  );
-}
-
-  );
-}
+    
