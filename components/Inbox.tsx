@@ -94,12 +94,6 @@ export default function Inbox() {
   const [feedbackSubmitted, setFeedbackSubmitted] =
     useState(false);
 
-  /*
-   * =========================================================
-   * LOAD FEEDBACK STATE
-   * =========================================================
-   */
-
   useEffect(() => {
     const alreadySubmitted =
       localStorage.getItem(
@@ -128,12 +122,6 @@ export default function Inbox() {
     loadRatingStats();
   }, []);
 
-  /*
-   * =========================================================
-   * OPEN EMAIL
-   * =========================================================
-   */
-
   function handleOpen(id: EmailMeta["id"]) {
     setOpenId(id);
 
@@ -144,22 +132,10 @@ export default function Inbox() {
     });
   }
 
-  /*
-   * =========================================================
-   * SIDEBAR SECTION CHANGE
-   * =========================================================
-   */
-
   function handleSelectSection(section: SidebarSection) {
     setActiveSection(section);
     setOpenId(null);
   }
-
-  /*
-   * =========================================================
-   * TAB CHANGE
-   * =========================================================
-   */
 
   function handleTabChange(tab: Tab) {
     setActiveTab(tab);
@@ -167,7 +143,7 @@ export default function Inbox() {
     const tabMap: Partial<
       Record<Tab, EmailMeta["id"]>
     > = {
-      projects: "work-projects",
+      projects: "independent-projects",
       experience: "experience",
       resume: "resume",
     };
@@ -186,12 +162,6 @@ export default function Inbox() {
       setOpenId(null);
     }
   }
-
-  /*
-   * =========================================================
-   * FEEDBACK
-   * =========================================================
-   */
 
   async function submitFeedback() {
     if (
@@ -231,12 +201,6 @@ export default function Inbox() {
     }
   }
 
-  /*
-   * =========================================================
-   * PROFILE LINKS
-   * =========================================================
-   */
-
   const profileLinks = useMemo(
     () => ({
       resume: DATA.resumeUrl,
@@ -245,12 +209,6 @@ export default function Inbox() {
     }),
     []
   );
-
-  /*
-   * =========================================================
-   * RENDER
-   * =========================================================
-   */
 
   return (
     <div
@@ -265,10 +223,6 @@ export default function Inbox() {
         text-[#202124]
       "
     >
-      {/* =====================================================
-          MOBILE SIDEBAR
-      ===================================================== */}
-
       <Sidebar
         mobileOnly
         activeSection={activeSection}
@@ -281,10 +235,6 @@ export default function Inbox() {
         onClose={() => setSidebarOpen(false)}
       />
 
-      {/* =====================================================
-          APPLICATION
-      ===================================================== */}
-
       <div
         className="
           flex
@@ -295,10 +245,6 @@ export default function Inbox() {
           overflow-hidden
         "
       >
-        {/* ===================================================
-            GMAIL HEADER
-        =================================================== */}
-
         <header
           className="
             sticky
@@ -332,7 +278,6 @@ export default function Inbox() {
               py-2
             "
           >
-            {/* Mobile menu */}
             <button
               type="button"
               aria-label="Open navigation"
@@ -362,7 +307,6 @@ export default function Inbox() {
               />
             </button>
 
-            {/* Logo */}
             <div
               className="
                 hidden
@@ -385,7 +329,6 @@ export default function Inbox() {
               />
             </div>
 
-            {/* Mobile title */}
             <div
               className="
                 flex
@@ -417,10 +360,6 @@ export default function Inbox() {
                 {DATA.name}
               </span>
             </div>
-
-            {/* =================================================
-                SEARCH
-            ================================================= */}
 
             <div
               className="
@@ -545,7 +484,6 @@ export default function Inbox() {
               </div>
             </div>
 
-            {/* Mobile search */}
             <button
               type="button"
               aria-label="Search"
@@ -570,10 +508,6 @@ export default function Inbox() {
               <Search size={19} />
             </button>
 
-            {/* =================================================
-                HEADER ACTIONS
-            ================================================= */}
-
             <div
               className="
                 ml-auto
@@ -588,7 +522,6 @@ export default function Inbox() {
                 md:gap-2
               "
             >
-              {/* Help */}
               <button
                 type="button"
                 aria-label="Help"
@@ -616,7 +549,6 @@ export default function Inbox() {
                 />
               </button>
 
-              {/* Settings */}
               <button
                 type="button"
                 aria-label="Settings"
@@ -644,7 +576,6 @@ export default function Inbox() {
                 />
               </button>
 
-              {/* Google apps */}
               <button
                 type="button"
                 aria-label="Google apps"
@@ -669,7 +600,6 @@ export default function Inbox() {
                 />
               </button>
 
-              {/* Profile */}
               <div className="relative ml-1 md:ml-2">
                 <button
                   type="button"
@@ -720,10 +650,6 @@ export default function Inbox() {
                   </span>
                 </button>
 
-                {/* =================================================
-                    PROFILE POPUP
-                ================================================= */}
-
                 {profileOpen && (
                   <>
                     <button
@@ -772,7 +698,6 @@ export default function Inbox() {
                         md:p-5
                       "
                     >
-                      {/* Profile */}
                       <div
                         className="
                           flex
@@ -907,7 +832,6 @@ export default function Inbox() {
                         </a>
                       </div>
 
-                      {/* Account */}
                       <div
                         className="
                           mt-5
@@ -1011,7 +935,6 @@ export default function Inbox() {
                         </div>
                       </div>
 
-                      {/* Links */}
                       <div
                         className="
                           mt-3
@@ -1078,10 +1001,6 @@ export default function Inbox() {
           </div>
         </header>
 
-        {/* =====================================================
-            MAIN AREA
-        ===================================================== */}
-
         <div
           className="
             flex
@@ -1091,8 +1010,6 @@ export default function Inbox() {
             overflow-hidden
           "
         >
-          {/* Desktop Sidebar */}
-
           <div
             className="
               hidden
@@ -1109,10 +1026,6 @@ export default function Inbox() {
             />
           </div>
 
-          {/* =================================================
-              MAIN CONTENT
-          ================================================= */}
-
           <div
             className="
               flex
@@ -1128,10 +1041,6 @@ export default function Inbox() {
               md:rounded-tl-2xl
             "
           >
-            {/* =================================================
-                ACTION BAR
-            ================================================= */}
-
             <div
               className="
                 shrink-0
@@ -1157,7 +1066,6 @@ export default function Inbox() {
                   md:px-4
                 "
               >
-                {/* Left actions */}
                 <div
                   className="
                     flex
@@ -1170,7 +1078,6 @@ export default function Inbox() {
                     md:gap-2
                   "
                 >
-                  {/* Select */}
                   <button
                     type="button"
                     aria-label="Select emails"
@@ -1203,7 +1110,6 @@ export default function Inbox() {
                     />
                   </button>
 
-                  {/* Refresh */}
                   <ActionButton
                     label="Refresh"
                     onClick={() =>
@@ -1213,13 +1119,11 @@ export default function Inbox() {
                     <RefreshCw size={17} />
                   </ActionButton>
 
-                  {/* More */}
                   <ActionButton label="More">
                     <MoreVertical size={17} />
                   </ActionButton>
                 </div>
 
-                {/* Right actions */}
                 <div
                   className="
                     flex
@@ -1268,10 +1172,6 @@ export default function Inbox() {
                   </ActionButton>
                 </div>
               </div>
-
-              {/* =================================================
-                  TABS
-              ================================================= */}
 
               <div
                 className="
@@ -1349,42 +1249,33 @@ export default function Inbox() {
                 />
               </div>
             </div>
-{/* =================================================
-                EMAIL / READING CONTENT
-            ================================================= */}
 
             <div className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain scroll-smooth">
-  {MEMORIES[activeSection] ? (
-    <MemoryView
-      memory={MEMORIES[activeSection]}
-      onBack={() => setActiveSection("inbox")}
-    />
-  ) : openId ? (
-    <ReadingPane
-      id={openId}
-      onBack={() => {
-        setOpenId(null);
-        setActiveTab("primary");
-      }}
-    />
-  ) : (
-    <EmailList
-      onOpen={handleOpen}
-      readIds={readIds}
-      activeSection={activeSection}
-      activeTab={activeTab}
-    />
-  )}
-</div>
-
-            
+              {MEMORIES[activeSection] ? (
+                <MemoryView
+                  memory={MEMORIES[activeSection]}
+                  onBack={() => setActiveSection("inbox")}
+                />
+              ) : openId ? (
+                <ReadingPane
+                  id={openId}
+                  onBack={() => {
+                    setOpenId(null);
+                    setActiveTab("primary");
+                  }}
+                />
+              ) : (
+                <EmailList
+                  onOpen={handleOpen}
+                  readIds={readIds}
+                  activeSection={activeSection}
+                  activeTab={activeTab}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
-
-      {/* =======================================================
-          FEEDBACK
-      ======================================================= */}
 
       {showFeedback && (
         <div
@@ -1588,10 +1479,6 @@ export default function Inbox() {
         </div>
       )}
 
-      {/* =======================================================
-          COMPOSE
-      ======================================================= */}
-
       <ComposeModal
         open={composeOpen}
         onClose={() =>
@@ -1601,10 +1488,6 @@ export default function Inbox() {
     </div>
   );
 }
-
-/* ===============================================================
-   ACTION BUTTON
-================================================================ */
 
 function ActionButton({
   children,
@@ -1653,10 +1536,6 @@ function ActionButton({
   );
 }
 
-/* ===============================================================
-   PROFILE LINK
-================================================================ */
-
 function ProfileLink({
   href,
   icon,
@@ -1703,10 +1582,6 @@ function ProfileLink({
     </a>
   );
 }
-
-/* ===============================================================
-   GMAIL TAB
-================================================================ */
 
 function GmailTab({
   active,
@@ -1774,7 +1649,6 @@ function GmailTab({
         }
       `}
     >
-      {/* Icon */}
       <span
         className={`
           shrink-0
@@ -1789,7 +1663,6 @@ function GmailTab({
         {icon}
       </span>
 
-      {/* Text */}
       <div
         className="
           flex
@@ -1856,4 +1729,6 @@ function GmailTab({
           </span>
         )}
       </div>
-    
+    </button>
+  );
+}
